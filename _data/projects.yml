@@ -1,0 +1,67 @@
+- title: "Multi-Agent Medical Evidence & Triage System"
+  published: true
+  date: "2026"
+  description: "A task-oriented medical AI agent system for health consultation, risk triage and evidence-based research, combining multi-agent orchestration, hybrid retrieval, dual-layer memory and safety constraints."
+  role: "Personal Project"
+  tech_stack:
+    - Multi-Agent
+    - ReAct
+    - RAG
+    - Milvus
+    - BM25
+    - Redis
+    - Mem0
+    - Medical AI
+  github: ""
+  article: ""
+  status: "Completed"
+  contributions:
+    - "Built task-oriented routing for consultation, risk-triage and medical-research workflows."
+    - "Introduced agent-level capability policies to control accessible medical and memory tools."
+    - "Implemented hybrid medical retrieval using dense search, BM25 and reciprocal-rank fusion."
+    - "Integrated Redis short-term memory with Mem0-based long-term memory."
+    - "Added pre-routing risk screening and final-response safety validation."
+
+- title: "Medical Deep Search Agent with Agentic Post-training"
+  published: true
+  date: "2026"
+  description: "A multimodal medical evidence-search agent exploring agentic SFT and reinforcement learning for long-horizon tool use, evidence acquisition and failure-aware credit assignment."
+  role: "Personal Project"
+  tech_stack:
+    - Agentic SFT
+    - GRPO
+    - Tool Calling
+    - Multimodal
+    - Evidence Search
+    - PyTorch
+  github: ""
+  article: ""
+  status: "In Progress"
+  contributions:
+    - "Designed the runtime contract for multi-step medical evidence acquisition."
+    - "Defined structured tool observations, evidence metadata and fatal-error boundaries."
+    - "Built data contracts and pipelines for agentic SFT and future RL experiments."
+    - "Designed a training path covering tool-trajectory SFT, grouped rollouts and Fatal-Aware GRPO."
+    - "Developed the project under a local-first architecture with scalable training components."
+
+- title: "Protein Language Models for Antimicrobial Peptide Discovery"
+  published: true
+  date: "2025"
+  description: "An end-to-end antimicrobial peptide discovery pipeline covering controllable sequence generation, peptide classification and MIC activity prediction using protein language models and graph-based representations."
+  role: "Research Project"
+  tech_stack:
+    - Protein-GPT2
+    - LoRA
+    - SupCon
+    - ArcFace
+    - GATv2
+    - ESM-2
+    - AI for Science
+  github: ""
+  article: ""
+  status: "Completed"
+  contributions:
+    - "Built a controllable AMP generation module based on Protein-GPT2 and soft-prompt conditioning."
+    - "Explored LoRA, supervised contrastive learning and margin-based classification for AMP discrimination."
+    - "Combined sequence representations, residue graphs and protein embeddings for MIC prediction."
+    - "Integrated generation, discrimination and activity prediction into a unified candidate-screening workflow."

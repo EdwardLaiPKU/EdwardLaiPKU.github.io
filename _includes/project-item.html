@@ -1,0 +1,12 @@
+<article class="project-item">
+  <div class="item-heading">
+    <h3>{{ include.project.title }}</h3>
+    <time>{{ include.project.date }}</time>
+  </div>
+  <p>{{ include.project.description }}</p>
+  <p class="meta"><span>Keywords:</span> {{ include.project.tech_stack | join: ' · ' }}</p>
+  <p class="text-links">
+    {% if include.project.github and include.project.github != "" %}<a href="{{ include.project.github }}">GitHub</a>{% endif %}
+    {% if include.project.article and include.project.article != "" %}<a href="{{ include.project.article | relative_url }}">Technical Writing</a>{% endif %}
+  </p>
+</article>

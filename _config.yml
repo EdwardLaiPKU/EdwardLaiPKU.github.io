@@ -1,0 +1,52 @@
+title: "Zhiwei Lai"
+description: "LLM, AI Agents, Medical AI and AI for Science."
+url: "https://EdwardLaiPKU.github.io"
+baseurl: ""
+repository: "EdwardLaiPKU/EdwardLaiPKU.github.io"
+
+name: "Zhiwei Lai"
+name_en: ""
+name_cn: "赖至伟"
+author: "Zhiwei Lai"
+tagline: "LLM · AI Agents · Medical AI · AI for Science"
+email: "zhiwei.lai@pku.edu.cn"
+github: "https://github.com/EdwardLaiPKU"
+linkedin: ""
+google_scholar: ""
+location: ""
+resume: ""
+avatar: ""
+
+lang: "en"
+timezone: "Asia/Shanghai"
+permalink: /writing/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "Zhiwei Lai"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .idea

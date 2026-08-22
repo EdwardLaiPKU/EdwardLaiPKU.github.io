@@ -1,0 +1,16 @@
+<aside class="profile{% unless site.avatar and site.avatar != '' %} profile--no-avatar{% endunless %}" aria-label="Profile">
+  {% if site.avatar and site.avatar != "" %}
+    <img class="avatar" src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.name }}" width="160" height="160">
+  {% endif %}
+  <h1 class="profile-name">{{ site.name }}</h1>
+  {% if site.name_en and site.name_en != "" and site.name_en != site.name %}<p class="profile-name-en">{{ site.name_en }}</p>{% endif %}
+  <p class="profile-tagline">{{ site.tagline }}</p>
+  {% if site.location != "" %}<p class="profile-location">{{ site.location }}</p>{% endif %}
+  <div class="profile-links" aria-label="Contact links">
+    {% if site.email and site.email != "" %}<a href="mailto:{{ site.email }}">Email</a>{% endif %}
+    {% if site.github and site.github != "" %}<a href="{{ site.github }}" rel="me">GitHub</a>{% endif %}
+    {% if site.resume and site.resume != "" %}<a href="{{ '/resume/' | relative_url }}">Resume</a>{% endif %}
+    {% if site.linkedin and site.linkedin != "" %}<a href="{{ site.linkedin }}" rel="me">LinkedIn</a>{% endif %}
+    {% if site.google_scholar and site.google_scholar != "" %}<a href="{{ site.google_scholar }}" rel="me">Google Scholar</a>{% endif %}
+  </div>
+</aside>
