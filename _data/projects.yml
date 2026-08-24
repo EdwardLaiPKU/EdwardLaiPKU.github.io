@@ -13,7 +13,7 @@
     - Mem0
     - Medical AI
   github: ""
-  article: ""
+  article: "/writing/medical-agent-architecture-evolution/"
   status: "Completed"
   contributions:
     - "Built task-oriented routing for consultation, risk-triage and medical-research workflows."
