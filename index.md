@@ -45,7 +45,6 @@ My current interests lie at the intersection of large language models and biomed
 <ul class="post-list">
   {% for post in recent_posts %}
   <li class="post-list-item">
-    <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d' }}</time>
     <div>
       <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <p class="post-list-tags">{{ post.categories | join: ' · ' }}</p>

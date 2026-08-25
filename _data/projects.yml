@@ -58,7 +58,7 @@
     - ESM-2
     - AI for Science
   github: ""
-  article: ""
+  article: "/writing/amp-discovery-protein-language-model/"
   status: "Completed"
   contributions:
     - "Built a controllable AMP generation module based on Protein-GPT2 and soft-prompt conditioning."
