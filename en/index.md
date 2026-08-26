@@ -1,32 +1,33 @@
 ---
 layout: default
-title: "首页"
-description: "Zhiwei Lai 的个人技术主页，关注 LLM、AI Agents、Medical AI 与 AI for Science。"
-lang: zh
+title: "Home"
+description: "Zhiwei Lai — LLM, AI Agents, Medical AI and AI for Science."
+permalink: /en/
+lang: en
 translation_key: home
-alternate_url: /en/
+alternate_url: /
 ---
 
 {% assign t = site.data.i18n[page.lang] %}
 
 ## {{ t.sections.about }}
 
-<p class="lede">我是赖至伟（Zhiwei Lai），毕业于墨尔本大学生物信息学硕士项目，本科就读于北京大学药学专业。</p>
+<p class="lede">I am Zhiwei Lai (赖至伟), a Master of Bioinformatics graduate from the University of Melbourne with an undergraduate background in Pharmacy from Peking University.</p>
 
-我目前关注 Large Language Models 与 Biomedical AI 的交叉方向，重点包括 AI Agents、RAG、Agentic Post-training、多模态系统与 AI for Science。我尤其希望构建面向医疗推理、证据检索与生物序列建模的可靠 LLM 系统。
+My current interests lie at the intersection of large language models and biomedical AI, with a focus on AI agents, retrieval-augmented generation, agentic post-training, multimodal systems, and AI for science. I am particularly interested in building reliable LLM systems for medical reasoning, evidence search, and biological sequence modeling.
 
 ## {{ t.sections.education }}
 
 <ul class="simple-list">
   <li>
     <span class="date">2023 – 2025</span>
-    <strong>墨尔本大学</strong><br>
-    <span class="section-note">生物信息学硕士 · 澳大利亚墨尔本<br>Distinction 毕业 · Dean's List</span>
+    <strong>University of Melbourne</strong><br>
+    <span class="section-note">Master of Bioinformatics · Melbourne, Australia<br>Graduate with Distinction · Dean's List</span>
   </li>
   <li>
     <span class="date">2018 – 2023</span>
-    <strong>北京大学</strong><br>
-    <span class="section-note">药学学士 · 中国北京</span>
+    <strong>Peking University</strong><br>
+    <span class="section-note">B.S. in Pharmacy · Beijing, China</span>
   </li>
 </ul>
 
@@ -40,7 +41,7 @@ alternate_url: /en/
 <p class="empty-state">{{ t.common.empty_projects }}</p>
 {% endif %}
 
-[{{ t.common.view_all_projects }}]({{ '/projects/' | relative_url }})
+[{{ t.common.view_all_projects }}]({{ '/en/projects/' | relative_url }})
 
 ## {{ t.sections.writing }}
 
@@ -52,6 +53,7 @@ alternate_url: /en/
   <li class="post-list-item">
     <div>
       <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="section-note">· 中文</span>
       <p class="post-list-tags">{{ post.categories | join: ' · ' }}</p>
     </div>
   </li>
@@ -61,7 +63,7 @@ alternate_url: /en/
 <p class="empty-state">{{ t.common.empty_writing }}</p>
 {% endif %}
 
-[{{ t.common.view_all_writing }}]({{ '/writing/' | relative_url }})
+[{{ t.common.view_all_writing }}]({{ '/en/writing/' | relative_url }})
 
 ## {{ t.sections.contact }}
 

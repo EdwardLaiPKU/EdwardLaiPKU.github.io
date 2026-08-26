@@ -1,4 +1,5 @@
 <footer class="site-footer">
-  <p>© {{ 'now' | date: '%Y' }} {{ site.name }}. Built with Jekyll and hosted on GitHub Pages.</p>
+  {% assign current_lang = page.lang | default: 'zh' %}
+  {% assign t = site.data.i18n[current_lang] %}
+  <p>© {{ 'now' | date: '%Y' }} {{ site.name }}. {{ t.common.built_with }}</p>
 </footer>
-

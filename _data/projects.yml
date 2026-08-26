@@ -1,8 +1,11 @@
-- title: "Multi-Agent Medical Evidence & Triage System"
+- title_zh: "多智能体医疗循证问答与风险分诊系统"
+  title_en: "Multi-Agent Medical Evidence & Triage System"
   published: true
   date: "2026"
-  description: "A task-oriented medical AI agent system for health consultation, risk triage and evidence-based research, combining multi-agent orchestration, hybrid retrieval, dual-layer memory and safety constraints."
-  role: "Personal Project"
+  description_zh: "面向健康咨询、风险分诊与循证研究的任务导向型医疗 AI Agent 系统，结合 Multi-Agent 编排、Hybrid RAG、双层 Memory 与安全约束。"
+  description_en: "A task-oriented medical AI agent system for health consultation, risk triage and evidence-based research, combining multi-agent orchestration, hybrid retrieval, dual-layer memory and safety constraints."
+  role_zh: "个人项目"
+  role_en: "Personal Project"
   tech_stack:
     - Multi-Agent
     - ReAct
@@ -14,19 +17,29 @@
     - Medical AI
   github: ""
   article: "/writing/medical-agent-architecture-evolution/"
-  status: "Completed"
-  contributions:
+  status_zh: "已完成"
+  status_en: "Completed"
+  contributions_zh:
+    - "构建面向健康咨询、风险分诊与医学研究工作流的任务路由。"
+    - "引入 Agent 级能力策略，控制各 Agent 可访问的医疗与 Memory 工具。"
+    - "实现结合 Dense Search、BM25 与 Reciprocal Rank Fusion 的 Hybrid RAG。"
+    - "集成 Redis 短期 Memory 与基于 Mem0 的长期 Memory。"
+    - "加入路由前风险筛查与最终回复安全校验。"
+  contributions_en:
     - "Built task-oriented routing for consultation, risk-triage and medical-research workflows."
     - "Introduced agent-level capability policies to control accessible medical and memory tools."
     - "Implemented hybrid medical retrieval using dense search, BM25 and reciprocal-rank fusion."
     - "Integrated Redis short-term memory with Mem0-based long-term memory."
     - "Added pre-routing risk screening and final-response safety validation."
 
-- title: "Medical Deep Search Agent with Agentic Post-training"
+- title_zh: "医疗 Deep Search Agent 与 Agentic 后训练"
+  title_en: "Medical Deep Search Agent with Agentic Post-training"
   published: true
   date: "2026"
-  description: "A multimodal medical evidence-search agent exploring agentic SFT and reinforcement learning for long-horizon tool use, evidence acquisition and failure-aware credit assignment."
-  role: "Personal Project"
+  description_zh: "面向长程工具调用与证据获取的多模态医疗循证搜索 Agent，探索 Agentic SFT、强化学习与 failure-aware credit assignment。"
+  description_en: "A multimodal medical evidence-search agent exploring agentic SFT and reinforcement learning for long-horizon tool use, evidence acquisition and failure-aware credit assignment."
+  role_zh: "个人项目"
+  role_en: "Personal Project"
   tech_stack:
     - Agentic SFT
     - GRPO
@@ -36,19 +49,29 @@
     - PyTorch
   github: ""
   article: ""
-  status: "In Progress"
-  contributions:
+  status_zh: "进行中"
+  status_en: "In Progress"
+  contributions_zh:
+    - "设计多步医疗证据获取的 runtime contract。"
+    - "定义结构化工具观察、证据元数据与 fatal-error 边界。"
+    - "构建面向 Agentic SFT 与后续 RL 实验的数据契约和处理流程。"
+    - "设计涵盖工具轨迹 SFT、分组 rollout 与 Fatal-Aware GRPO 的训练路径。"
+    - "采用 local-first 架构开发，并保留可扩展训练组件。"
+  contributions_en:
     - "Designed the runtime contract for multi-step medical evidence acquisition."
     - "Defined structured tool observations, evidence metadata and fatal-error boundaries."
     - "Built data contracts and pipelines for agentic SFT and future RL experiments."
     - "Designed a training path covering tool-trajectory SFT, grouped rollouts and Fatal-Aware GRPO."
     - "Developed the project under a local-first architecture with scalable training components."
 
-- title: "Protein Language Models for Antimicrobial Peptide Discovery"
+- title_zh: "基于 Protein Language Model 的抗菌肽计算发现系统"
+  title_en: "Protein Language Models for Antimicrobial Peptide Discovery"
   published: true
   date: "2025"
-  description: "An end-to-end antimicrobial peptide discovery pipeline covering controllable sequence generation, peptide classification and MIC activity prediction using protein language models and graph-based representations."
-  role: "Research Project"
+  description_zh: "覆盖可控序列生成、抗菌肽分类与 MIC 活性预测的端到端计算发现流程，结合 Protein Language Model 与图结构表征。"
+  description_en: "An end-to-end antimicrobial peptide discovery pipeline covering controllable sequence generation, peptide classification and MIC activity prediction using protein language models and graph-based representations."
+  role_zh: "研究项目"
+  role_en: "Research Project"
   tech_stack:
     - Protein-GPT2
     - LoRA
@@ -59,8 +82,14 @@
     - AI for Science
   github: ""
   article: "/writing/amp-discovery-protein-language-model/"
-  status: "Completed"
-  contributions:
+  status_zh: "已完成"
+  status_en: "Completed"
+  contributions_zh:
+    - "基于 Protein-GPT2 与 Soft Prompt conditioning 构建可控抗菌肽生成模块。"
+    - "探索 LoRA、SupCon 与 margin-based classification 在抗菌肽判别中的应用。"
+    - "结合序列表征、残基图与蛋白质 embedding 进行 MIC 预测。"
+    - "将生成、判别与活性预测整合为统一的候选筛选流程。"
+  contributions_en:
     - "Built a controllable AMP generation module based on Protein-GPT2 and soft-prompt conditioning."
     - "Explored LoRA, supervised contrastive learning and margin-based classification for AMP discrimination."
     - "Combined sequence representations, residue graphs and protein embeddings for MIC prediction."

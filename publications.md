@@ -1,10 +1,12 @@
 ---
 layout: page
-title: "Publications"
+title: "研究成果"
 permalink: /publications/
-description: "Verified papers, manuscripts, and research artifacts."
+description: "已公开的论文、研究稿件与相关成果。"
+lang: zh
 ---
 
+{% assign t = site.data.i18n[page.lang] %}
 {% if site.data.publications.size > 0 %}
   {% assign publications_by_year = site.data.publications | group_by: 'year' | sort: 'name' | reverse %}
   {% for year in publications_by_year %}
@@ -25,5 +27,5 @@ description: "Verified papers, manuscripts, and research artifacts."
   </section>
   {% endfor %}
 {% else %}
-<p class="empty-state">Research outputs and manuscripts will be listed here.</p>
+<p class="empty-state">{{ t.common.research_empty }}</p>
 {% endif %}

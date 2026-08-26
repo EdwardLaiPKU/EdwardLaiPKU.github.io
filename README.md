@@ -19,7 +19,13 @@ resume: "/assets/resume/resume.pdf"
 avatar: "/assets/images/avatar/avatar.jpg"
 ```
 
-Then replace the explicit `TODO` entries in `index.md`, `_data/projects.yml`, and the draft posts. Add only verified publications to `_data/publications.yml`.
+Replace the explicit `TODO` entries in draft posts before publishing them. Add only verified publications to `_data/publications.yml`.
+
+## Bilingual Content
+
+Chinese is the default language at `/`; English static pages live under `/en/`. Shared UI labels are stored in `_data/i18n.yml`, and bilingual project fields remain in the single `_data/projects.yml` file.
+
+Paired static pages declare `lang` and `alternate_url` in Front Matter. Technical articles currently remain Chinese-only: published posts use `lang: zh`, while the English Writing page links to their existing `/writing/.../` URLs.
 
 ## Local Development
 
@@ -59,6 +65,7 @@ tags: [Multi-Agent, Retrieval]
 description: "One-sentence description."
 draft: true
 published: false
+lang: zh
 math: true
 ---
 ```
@@ -114,10 +121,11 @@ This repository uses only plugins supported by the `github-pages` gem: `jekyll-f
 
 ```text
 _config.yml               Site and profile configuration
-_data/                    Navigation, projects, publications
+_data/                    Navigation, i18n, projects, publications
 _includes/                Shared navigation/profile/footer fragments
 _layouts/                 Base, page, and post layouts
 _posts/                   Markdown technical writing
+en/                       English static pages
 assets/css/style.scss     Site and responsive styles
 assets/js/toc.js          Small H2/H3 table-of-contents generator
 assets/images/            Avatar, project, and blog images

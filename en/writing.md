@@ -1,14 +1,15 @@
 ---
 layout: page
-title: "技术文章"
-permalink: /writing/
-description: "关于 AI Agents、RAG、Agentic Post-training、Medical AI 与 Protein Language Model 的技术文章。"
-lang: zh
+title: "Technical Writing"
+permalink: /en/writing/
+description: "Notes on agents, RAG, post-training, multimodal AI, medical AI, and protein language models."
+lang: en
 translation_key: writing
-alternate_url: /en/writing/
+alternate_url: /writing/
 ---
 
-{% assign t = site.data.i18n[page.lang] %}
+Technical articles are currently published in Chinese. English versions may be added selectively in the future.
+
 {% assign published_posts = site.posts | where: "published", true %}
 {% if published_posts.size > 0 %}
   <ul class="post-list">
@@ -16,6 +17,7 @@ alternate_url: /en/writing/
     <li class="post-list-item">
       <div>
         <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="section-note">· 中文</span>
         {% if post.description %}<p class="post-list-description">{{ post.description }}</p>{% endif %}
         <p class="post-list-tags">{{ post.categories | join: ' · ' }}{% if post.tags.size > 0 %} · {{ post.tags | join: ' · ' }}{% endif %}</p>
       </div>
@@ -23,5 +25,5 @@ alternate_url: /en/writing/
     {% endfor %}
   </ul>
 {% else %}
-<p class="empty-state">{{ t.common.empty_writing }}</p>
+<p class="empty-state">Technical articles will be published here.</p>
 {% endif %}

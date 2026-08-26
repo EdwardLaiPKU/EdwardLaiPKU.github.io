@@ -1,12 +1,16 @@
+{% assign current_lang = page.lang | default: 'zh' %}
+{% assign t = site.data.i18n[current_lang] %}
+{% assign title_key = 'title_' | append: current_lang %}
+{% assign description_key = 'description_' | append: current_lang %}
 <article class="project-item">
   <div class="item-heading">
-    <h3>{{ include.project.title }}</h3>
+    <h3>{{ include.project[title_key] }}</h3>
     <time>{{ include.project.date }}</time>
   </div>
-  <p>{{ include.project.description }}</p>
-  <p class="meta"><span>Keywords:</span> {{ include.project.tech_stack | join: ' · ' }}</p>
+  <p>{{ include.project[description_key] }}</p>
+  <p class="meta"><span>{{ t.common.keywords }}:</span> {{ include.project.tech_stack | join: ' · ' }}</p>
   <p class="text-links">
     {% if include.project.github and include.project.github != "" %}<a href="{{ include.project.github }}">GitHub</a>{% endif %}
-    {% if include.project.article and include.project.article != "" %}<a href="{{ include.project.article | relative_url }}">Technical Writing</a>{% endif %}
+    {% if include.project.article and include.project.article != "" %}<a href="{{ include.project.article | relative_url }}">{% if current_lang == 'en' %}{{ t.common.chinese_article }}{% else %}{{ t.common.technical_writing }}{% endif %}</a>{% endif %}
   </p>
 </article>

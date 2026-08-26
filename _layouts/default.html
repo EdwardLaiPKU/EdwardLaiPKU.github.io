@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'en' }}">
+{% assign current_lang = page.lang | default: 'zh' %}
+{% assign t = site.data.i18n[current_lang] %}
+<html lang="{% if current_lang == 'en' %}en{% else %}zh-CN{% endif %}">
   <head>
     {% include head.html %}
   </head>
   <body>
-    <a class="skip-link" href="#content">Skip to content</a>
+    <a class="skip-link" href="#content">{{ t.common.skip_to_content }}</a>
     <header class="topbar">
       <div class="topbar-inner">{% include nav.html %}</div>
     </header>
@@ -17,4 +19,3 @@
     </div>
   </body>
 </html>
-

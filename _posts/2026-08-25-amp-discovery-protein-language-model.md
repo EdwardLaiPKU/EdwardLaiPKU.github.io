@@ -13,6 +13,7 @@ tags:
   - AI for Science
 description: "从 Generate → Filter → Rank 的完整 AMP Discovery 架构出发，深入 Protein-LM 生成模块，复盘 condition identity、Soft Prompt、SupCon、生成评测与 artifact provenance，并解释为什么更低的 Loss 并不自动意味着更好的生成结果。"
 published: true
+lang: zh
 math: true
 ---
 

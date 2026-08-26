@@ -1,5 +1,5 @@
 title: "Zhiwei Lai"
-description: "LLM, AI Agents, Medical AI and AI for Science."
+description: "LLM、AI Agents、Medical AI 与 AI for Science 个人技术主页。"
 url: "https://EdwardLaiPKU.github.io"
 baseurl: ""
 repository: "EdwardLaiPKU/EdwardLaiPKU.github.io"
@@ -17,7 +17,7 @@ location: ""
 resume: ""
 avatar: ""
 
-lang: "en"
+lang: "zh-CN"
 timezone: "Asia/Shanghai"
 permalink: /writing/:title/
 markdown: kramdown

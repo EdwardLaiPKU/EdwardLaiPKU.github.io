@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "简历"
-permalink: /resume/
-description: "个人简历。"
-lang: zh
+title: "Resume"
+permalink: /en/resume/
+description: "Resume information."
+lang: en
 translation_key: resume
-alternate_url: /en/resume/
+alternate_url: /resume/
 ---
 
 {% assign t = site.data.i18n[page.lang] %}

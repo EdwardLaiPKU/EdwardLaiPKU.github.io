@@ -13,6 +13,7 @@ tags:
   - Agent Architecture
 description: "一个能运行的 Multi-Agent 系统，为什么还需要继续重构？本文复盘医疗 Agent 从 free-form subtasks、全局 Skill 暴露，演进到 Typed TaskPlan、capability-scoped execution 与明确 runtime ownership 的过程，并讨论 SharedContext、Memory、RAG 和 Safety 在系统中的边界。"
 published: true
+lang: zh
 math: false
 ---
 

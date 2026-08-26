@@ -13,6 +13,7 @@ tags:
   - Agent Engineering
 description: "一个模块出现在代码里，并不代表它已经成为系统能力。本文从 Hybrid Retrieval、Memory 与 Safety 三条真实工程链路出发，讨论 candidate identity、session/user ownership、failure semantics、degradation 与 frozen evaluation 如何共同定义一个真正的 Runtime Capability。"
 published: true
+lang: zh
 math: true
 ---
 

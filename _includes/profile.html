@@ -1,4 +1,6 @@
-<aside class="profile{% unless site.avatar and site.avatar != '' %} profile--no-avatar{% endunless %}" aria-label="Profile">
+{% assign current_lang = page.lang | default: 'zh' %}
+{% assign t = site.data.i18n[current_lang] %}
+<aside class="profile{% unless site.avatar and site.avatar != '' %} profile--no-avatar{% endunless %}" aria-label="{{ t.common.profile }}">
   {% if site.avatar and site.avatar != "" %}
     <img class="avatar" src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.name }}" width="160" height="160">
   {% endif %}

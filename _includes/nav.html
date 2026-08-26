@@ -1,10 +1,41 @@
-<nav class="site-nav" aria-label="Primary navigation">
-  <a class="site-mark" href="{{ '/' | relative_url }}" aria-label="Home">{{ site.name | default: site.title }}</a>
+{% assign current_lang = page.lang | default: 'zh' %}
+{% assign t = site.data.i18n[current_lang] %}
+{% assign nav_url_key = 'url_' | append: current_lang %}
+{% if current_lang == 'en' %}
+  {% assign home_url = '/en/' %}
+{% else %}
+  {% assign home_url = '/' %}
+{% endif %}
+<nav class="site-nav" aria-label="{{ t.common.primary_navigation }}">
+  <a class="site-mark" href="{{ home_url | relative_url }}" aria-label="{{ t.nav.home }}">{{ site.name | default: site.title }}</a>
   <div class="nav-links">
     {% for item in site.data.navigation %}
-      {% assign item_url = item.url | relative_url %}
-      <a href="{{ item_url }}"{% if page.url == item.url or page.url contains item.url and item.url != '/' %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% assign raw_item_url = item[nav_url_key] %}
+      {% assign item_url = raw_item_url | relative_url %}
+      <a href="{{ item_url }}"{% if page.url == raw_item_url or page.url contains raw_item_url and raw_item_url != '/' and raw_item_url != '/en/' %} aria-current="page"{% endif %}>{{ t.nav[item.key] }}</a>
     {% endfor %}
+    {% if page.alternate_url and page.alternate_url != '' %}
+      {% if current_lang == 'en' %}
+        {% assign zh_url = page.alternate_url %}
+        {% assign en_url = page.url %}
+      {% else %}
+        {% assign zh_url = page.url %}
+        {% assign en_url = page.alternate_url %}
+      {% endif %}
+    {% elsif page.layout == 'post' %}
+      {% assign zh_url = page.url %}
+      {% assign en_url = '/en/writing/' %}
+    {% elsif current_lang == 'en' %}
+      {% assign zh_url = '/' %}
+      {% assign en_url = page.url %}
+    {% else %}
+      {% assign zh_url = page.url %}
+      {% assign en_url = '/en/' %}
+    {% endif %}
+    <span class="language-switch" aria-label="Language">
+      <a href="{{ zh_url | relative_url }}" lang="zh-CN"{% if current_lang != 'en' %} aria-current="true"{% endif %}>{{ t.common.language_zh }}</a>
+      <span aria-hidden="true">|</span>
+      <a href="{{ en_url | relative_url }}" lang="en"{% if current_lang == 'en' %} aria-current="true"{% endif %}>{{ t.common.language_en }}</a>
+    </span>
   </div>
 </nav>
-

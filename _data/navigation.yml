@@ -1,11 +1,12 @@
-- title: Home
-  url: /
-- title: Projects
-  url: /projects/
-- title: Writing
-  url: /writing/
-- title: Publications
-  url: /publications/
-- title: Resume
-  url: /resume/
-
+- key: home
+  url_zh: /
+  url_en: /en/
+- key: projects
+  url_zh: /projects/
+  url_en: /en/projects/
+- key: writing
+  url_zh: /writing/
+  url_en: /en/writing/
+- key: resume
+  url_zh: /resume/
+  url_en: /en/resume/

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "项目"
-permalink: /projects/
-description: "LLM 系统、AI Agents、Medical AI 与 AI for Science 方向的代表项目。"
-lang: zh
+title: "Projects"
+permalink: /en/projects/
+description: "Selected work in LLM systems, agents, retrieval, medical AI, and AI for Science."
+lang: en
 translation_key: projects
-alternate_url: /en/projects/
+alternate_url: /projects/
 ---
 
 {% assign current_lang = page.lang | default: 'zh' %}
@@ -33,7 +33,7 @@ alternate_url: /en/projects/
   <p class="meta"><span>{{ t.common.tech_stack }}:</span> {{ project.tech_stack | join: ' · ' }}</p>
   <p class="text-links">
     {% if project.github and project.github != "" %}<a href="{{ project.github }}">GitHub</a>{% endif %}
-    {% if project.article and project.article != "" %}<a href="{{ project.article | relative_url }}">{{ t.common.technical_writing }}</a>{% endif %}
+    {% if project.article and project.article != "" %}<a href="{{ project.article | relative_url }}">{{ t.common.chinese_article }}</a>{% endif %}
   </p>
 </section>
 {% endfor %}
