@@ -123,6 +123,24 @@ a:focus-visible, summary:focus-visible { outline: 2px solid $link; outline-offse
 .lede { color: #3f4854; font-size: 1.04rem; line-height: 1.8; }
 .section-note, .page-description, .post-description { color: $muted; }
 
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 32px;
+  align-items: start;
+}
+
+.about-copy p:last-child { margin-bottom: 0; }
+.content .about-photo {
+  width: 210px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
 .simple-list { margin: 0; padding: 0; list-style: none; }
 .simple-list li { margin: 0; padding: 11px 0; border-bottom: 1px solid #eef0f2; }
 .simple-list li:first-child { padding-top: 0; }
@@ -139,6 +157,8 @@ a:focus-visible, summary:focus-visible { outline: 2px solid $link; outline-offse
 .meta { color: $muted; font-size: 0.88rem; }
 .meta span { color: #4b5563; font-weight: 600; }
 .text-links { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.9rem; }
+.project-actions { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.9rem; font-weight: 550; }
+.project-item .project-actions { margin-top: 12px; }
 
 .page-header, .post-header { margin-bottom: 34px; }
 .page-header h1, .post-header h1 { margin-bottom: 8px; }
@@ -252,6 +272,12 @@ pre code { padding: 0; background: transparent; font-size: 0.83rem; }
   .post-list-item { grid-template-columns: 1fr; gap: 2px; }
   pre { margin-left: 0; margin-right: 0; padding: 13px; }
   .toc { padding: 9px 12px; }
+}
+
+@media (max-width: 620px) {
+  .about-intro { grid-template-columns: 1fr; gap: 20px; }
+  .about-copy { grid-row: 2; }
+  .about-photo { grid-row: 1; justify-self: start; }
 }
 
 @media print {

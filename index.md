@@ -11,11 +11,16 @@ alternate_url: /en/
 
 ## {{ t.sections.about }}
 
-<p class="lede">我是赖至伟（Zhiwei Lai），墨尔本大学生物信息学硕士，北京大学药学院理学学士（药学）。</p>
-
-我的学习和项目经历横跨生命科学与人工智能，目前主要关注大语言模型、AI Agent 与 AI for Science，重点方向包括医疗循证检索、Agent 后训练以及蛋白质与肽序列建模。
-
-过去一段时间，我主要围绕三个方向做了较完整的项目实践：多智能体医疗循证问答与风险分诊系统、医疗 Deep Search Agent 后训练，以及基于 Protein Language Model 的抗菌肽计算发现系统。相比单纯堆叠模型组件，我更关注系统是否形成清晰的运行时边界、可追踪的实验链路，以及新增模块是否真正带来任务级收益。
+<div class="about-intro">
+  <div class="about-copy">
+    <p class="lede">我是赖至伟（Zhiwei Lai），墨尔本大学生物信息学硕士，北京大学药学院理学学士（药学）。</p>
+    <p>我的学习和项目经历横跨生命科学与人工智能，目前主要关注大语言模型、AI Agent 与 AI for Science，重点方向包括医疗循证检索、Agent 后训练以及蛋白质与肽序列建模。</p>
+    <p>过去一段时间，我主要围绕三个方向做了较完整的项目实践：多智能体医疗循证问答与风险分诊系统、医疗 Deep Search Agent 后训练，以及基于 Protein Language Model 的抗菌肽计算发现系统。相比单纯堆叠模型组件，我更关注系统是否形成清晰的运行时边界、可追踪的实验链路，以及新增模块是否真正带来任务级收益。</p>
+  </div>
+  {% if site.profile_home_image and site.profile_home_image != "" %}
+  <img class="about-photo" src="{{ site.profile_home_image | relative_url }}" alt="赖至伟个人照片" width="210" height="263" decoding="async">
+  {% endif %}
+</div>
 
 ## {{ t.sections.education }}
 

@@ -1,0 +1,12 @@
+{% assign current_lang = page.lang | default: 'zh' %}
+{% assign t = site.data.i18n[current_lang] %}
+{% assign has_github = false %}
+{% assign has_article = false %}
+{% if include.project.github and include.project.github != "" %}{% assign has_github = true %}{% endif %}
+{% if include.project.article and include.project.article != "" %}{% assign has_article = true %}{% endif %}
+{% if has_github or has_article %}
+<p class="project-actions">
+  {% if has_github %}<a href="{{ include.project.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">{{ t.common.github }} <span aria-hidden="true">↗</span></a>{% endif %}
+  {% if has_article %}<a href="{{ include.project.article | relative_url }}">{{ t.common.technical_article }} <span aria-hidden="true">→</span></a>{% endif %}
+</p>
+{% endif %}

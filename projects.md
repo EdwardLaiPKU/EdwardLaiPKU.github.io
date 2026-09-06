@@ -33,10 +33,7 @@ alternate_url: /en/projects/
   </ul>
 
   <p class="meta"><span>{{ t.common.tech_stack }}:</span> {{ project.tech_stack_zh | join: ' · ' }}</p>
-  <p class="text-links">
-    {% if project.github and project.github != "" %}<a href="{{ project.github }}">GitHub</a>{% endif %}
-    {% if project.article and project.article != "" %}<a href="{{ project.article | relative_url }}">{{ t.common.technical_writing }}</a>{% endif %}
-  </p>
+  {% include project-actions.html project=project %}
 </section>
 {% endfor %}
 {% if published_projects.size == 0 %}

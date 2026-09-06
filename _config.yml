@@ -16,6 +16,7 @@ google_scholar: ""
 location: ""
 resume: ""
 avatar: ""
+profile_home_image: "/assets/images/profile-home.jpg"
 
 lang: "zh-CN"
 timezone: "Asia/Shanghai"

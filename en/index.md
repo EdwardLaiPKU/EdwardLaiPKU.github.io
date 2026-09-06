@@ -12,9 +12,15 @@ alternate_url: /
 
 ## {{ t.sections.about }}
 
-<p class="lede">I am Zhiwei Lai (赖至伟), a Master of Bioinformatics graduate from the University of Melbourne with an undergraduate background in Pharmacy from Peking University.</p>
-
-My current interests lie at the intersection of large language models and biomedical AI, with a focus on AI agents, retrieval-augmented generation, agentic post-training, multimodal systems, and AI for science. I am particularly interested in building reliable LLM systems for medical reasoning, evidence search, and biological sequence modeling.
+<div class="about-intro">
+  <div class="about-copy">
+    <p class="lede">I am Zhiwei Lai (赖至伟), a Master of Bioinformatics graduate from the University of Melbourne with an undergraduate background in Pharmacy from Peking University.</p>
+    <p>My current interests lie at the intersection of large language models and biomedical AI, with a focus on AI agents, retrieval-augmented generation, agentic post-training, multimodal systems, and AI for science. I am particularly interested in building reliable LLM systems for medical reasoning, evidence search, and biological sequence modeling.</p>
+  </div>
+  {% if site.profile_home_image and site.profile_home_image != "" %}
+  <img class="about-photo" src="{{ site.profile_home_image | relative_url }}" alt="Portrait of Zhiwei Lai" width="210" height="263" decoding="async">
+  {% endif %}
+</div>
 
 ## {{ t.sections.education }}
 
