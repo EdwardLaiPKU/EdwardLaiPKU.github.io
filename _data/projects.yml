@@ -70,7 +70,7 @@
     - Evidence Search
     - PyTorch
   github: "https://github.com/EdwardLaiPKU/medical-deep-search"
-  article: ""
+  article: "/writing/medical-deep-search-agentic-sft/"
   status_zh: "已完成"
   status_en: "Completed"
   contributions_zh:
