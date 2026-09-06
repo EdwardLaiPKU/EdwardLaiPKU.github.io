@@ -22,7 +22,9 @@ alternate_url: /en/projects/
     <h2>{{ project[title_key] }}</h2>
     <time>{{ project.date }}</time>
   </div>
-  <p>{{ project[description_key] }}</p>
+  {% for paragraph in project[description_key] %}
+  <p>{{ paragraph }}</p>
+  {% endfor %}
   <p class="meta"><span>{{ t.common.status }}:</span> {{ project[status_key] }} · <span>{{ t.common.role }}:</span> {{ project[role_key] }}</p>
 
   <h3>{{ t.common.key_contributions }}</h3>
@@ -30,7 +32,7 @@ alternate_url: /en/projects/
     {% for contribution in project[contributions_key] %}<li>{{ contribution }}</li>{% endfor %}
   </ul>
 
-  <p class="meta"><span>{{ t.common.tech_stack }}:</span> {{ project.tech_stack | join: ' · ' }}</p>
+  <p class="meta"><span>{{ t.common.tech_stack }}:</span> {{ project.tech_stack_zh | join: ' · ' }}</p>
   <p class="text-links">
     {% if project.github and project.github != "" %}<a href="{{ project.github }}">GitHub</a>{% endif %}
     {% if project.article and project.article != "" %}<a href="{{ project.article | relative_url }}">{{ t.common.technical_writing }}</a>{% endif %}

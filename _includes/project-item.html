@@ -2,13 +2,24 @@
 {% assign t = site.data.i18n[current_lang] %}
 {% assign title_key = 'title_' | append: current_lang %}
 {% assign description_key = 'description_' | append: current_lang %}
+{% if current_lang == 'zh' %}
+  {% assign project_tech_stack = include.project.tech_stack_zh %}
+{% else %}
+  {% assign project_tech_stack = include.project.tech_stack %}
+{% endif %}
 <article class="project-item">
   <div class="item-heading">
     <h3>{{ include.project[title_key] }}</h3>
     <time>{{ include.project.date }}</time>
   </div>
+  {% if current_lang == 'zh' %}
+    {% for paragraph in include.project[description_key] %}
+  <p>{{ paragraph }}</p>
+    {% endfor %}
+  {% else %}
   <p>{{ include.project[description_key] }}</p>
-  <p class="meta"><span>{{ t.common.keywords }}:</span> {{ include.project.tech_stack | join: ' · ' }}</p>
+  {% endif %}
+  <p class="meta"><span>{{ t.common.keywords }}:</span> {{ project_tech_stack | join: ' · ' }}</p>
   <p class="text-links">
     {% if include.project.github and include.project.github != "" %}<a href="{{ include.project.github }}">GitHub</a>{% endif %}
     {% if include.project.article and include.project.article != "" %}<a href="{{ include.project.article | relative_url }}">{% if current_lang == 'en' %}{{ t.common.chinese_article }}{% else %}{{ t.common.technical_writing }}{% endif %}</a>{% endif %}

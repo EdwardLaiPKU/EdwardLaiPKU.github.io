@@ -11,9 +11,11 @@ alternate_url: /en/
 
 ## {{ t.sections.about }}
 
-<p class="lede">我是赖至伟（Zhiwei Lai），毕业于墨尔本大学生物信息学硕士项目，本科就读于北京大学药学专业。</p>
+<p class="lede">我是赖至伟（Zhiwei Lai），墨尔本大学生物信息学硕士，北京大学药学院理学学士（药学）。</p>
 
-我目前关注 Large Language Models 与 Biomedical AI 的交叉方向，重点包括 AI Agents、RAG、Agentic Post-training、多模态系统与 AI for Science。我尤其希望构建面向医疗推理、证据检索与生物序列建模的可靠 LLM 系统。
+我的学习和项目经历横跨生命科学与人工智能，目前主要关注大语言模型、AI Agent 与 AI for Science，重点方向包括医疗循证检索、Agent 后训练以及蛋白质与肽序列建模。
+
+过去一段时间，我主要围绕三个方向做了较完整的项目实践：多智能体医疗循证问答与风险分诊系统、医疗 Deep Search Agent 后训练，以及基于 Protein Language Model 的抗菌肽计算发现系统。相比单纯堆叠模型组件，我更关注系统是否形成清晰的运行时边界、可追踪的实验链路，以及新增模块是否真正带来任务级收益。
 
 ## {{ t.sections.education }}
 
@@ -21,12 +23,12 @@ alternate_url: /en/
   <li>
     <span class="date">2023 – 2025</span>
     <strong>墨尔本大学</strong><br>
-    <span class="section-note">生物信息学硕士 · 澳大利亚墨尔本<br>Distinction 毕业 · Dean's List</span>
+    <span class="section-note">生物信息学硕士 · 墨尔本，澳大利亚<br>Distinction · Dean's List</span>
   </li>
   <li>
     <span class="date">2018 – 2023</span>
-    <strong>北京大学</strong><br>
-    <span class="section-note">药学学士 · 中国北京</span>
+    <strong>北京大学药学院</strong><br>
+    <span class="section-note">理学学士（药学） · 北京，中国</span>
   </li>
 </ul>
 
