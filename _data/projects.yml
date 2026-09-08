@@ -115,7 +115,7 @@
     - ESM-2
     - GATv2
     - AI for Science
-  github: ""
+  github: "https://github.com/EdwardLaiPKU/amp-discovery"
   article: "/writing/amp-discovery-protein-language-model/"
   status_zh: "已完成"
   status_en: "Completed"
